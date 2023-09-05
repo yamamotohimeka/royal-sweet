@@ -46,7 +46,7 @@
     top: 18px;
     left: 341px;
 
-    @media (max-width:1600px) {
+    @media (max-width: 1600px) {
       left: 150px;
     }
 
@@ -59,7 +59,7 @@
       left: 0;
     }
 
-    @media (max-width:645px) {
+    @media (max-width: 645px) {
       top: 20%;
     }
 
@@ -191,7 +191,7 @@
       font-size: 25px;
     }
 
-    @media (max-width:645px) {
+    @media (max-width: 645px) {
       width: 90%;
       height: 40px;
       line-height: 40px;
@@ -350,347 +350,31 @@
 .salary {
   width: 100%;
   height: 1339px;
-  background-image: url(../img/bg_white.png);
+  background-image: url(../img/salary-bg.jpg);
   background-repeat: no-repeat;
-  background-position: center;
   background-size: cover;
+  background-position: center;
 
-  @include tb {
-    background-position: 70% 50%;
-    height: auto;
+  @media (min-width: 1240px) {
+    max-width: 3371px;
+    height: 1339px;
   }
 
-  &__container {
-    width: 1100px;
-    height: 100%;
-    margin: 0 auto;
-    padding: 92px 0;
+  @include pc {
+    width: 100%;
+    height: calc(1393vw / (1240 / 100));
+  }
+
+  img {
+    max-width: 834px;
+    max-height: 1230px;
+    margin: auto;
+    display: block;
+    padding-top: 50px;
 
     @include pc {
-      width: 90%;
-    }
-
-    @include sp {
-      padding: 50px 0 30px;
-    }
-
-    @include xs {
-      padding: 50px 0 10px;
-    }
-  }
-
-  &__heading {
-    width: 267px;
-    height: 60px;
-    margin-left: 24px;
-    background: #bca27c;
-    line-height: 60px;
-    color: #fff;
-    font-size: 35px;
-    text-align: center;
-    transform: skewX(-39deg);
-    margin-top: 3px;
-
-    @include tb {
-      width: 40%;
-      font-size: 25px;
-      margin-left: 45px;
-    }
-
-    @media (max-width:645px) {
-      width: 70%;
-      font-size: 16px;
-      height: 40px;
-      line-height: 40px;
-      margin-left: 15px;
-      margin: 0 auto;
-    }
-
-    &--skew {
-      transform: skewX(39deg);
-      padding-top: 3px;
-      padding-right: 21px;
-      font-weight: 500;
-
-      @include tb {
-        padding-right: 0;
-      }
-    }
-  }
-
-  &__text {
-    width: 653px;
-    height: 1097px;
-    background-image: url(../img/bgsquare.png);
-    box-shadow: 0px 0px 8px 4px #fff inset;
-    margin-top: 40px;
-    text-align: center;
-    color: #2d2d2d;
-
-    @include tb {
-      margin: 40px auto;
-      width: 100%;
-      height: auto;
-    }
-
-    &--design {
-      padding-top: 31px;
-      padding-bottom: 28px;
-
-      @include tb {
-        width: 80%;
-        margin: 0 auto;
-      }
-    }
-
-    &--medium {
-      font-size: 35px;
-      margin-left: 20px;
-      letter-spacing: 0;
-
-      @media (max-width:645px) {
-        font-size: 30px;
-      }
-
-      @include sp {
-        font-size: 20px;
-      }
-
-      @include xs {
-        font-size: 15px;
-      }
-    }
-
-    &--large {
-      font-size: 50px;
-      font-feature-settings: "palt";
-      margin-left: -29px;
-      margin-top: -4px;
-      letter-spacing: 0;
-
-      @media (max-width:645px) {
-        font-size: 35px;
-        margin-left: 0;
-        margin: 0;
-      }
-
-      @include sp {
-        font-size: 24px;
-      }
-    }
-
-    &--bggold {
-      width: 516px;
-      height: 50px;
-      line-height: 50px;
-      font-size: 20px;
-      font-weight: bold;
-      margin-left: 16px;
-      margin-top: -6px;
-      font-feature-settings: "palt";
-      letter-spacing: 0.05em;
-      color: #fff;
-      border: 1px solid #fff;
-      box-shadow: rgba(0, 0, 0, 0.75) 1px 1px 0px;
-      background: #e1d486;
-      background: -moz-linear-gradient(bottom, #857a4d 0%, #e1d486 100%);
-      background: -webkit-gradient(linear, left bottom, left top, from(#857a4d), to(#e1d486));
-      background: -webkit-linear-gradient(bottom, #857a4d 0%, #e1d486 100%);
-      background: -o-linear-gradient(bottom, #857a4d 0%, #e1d486 100%);
-      background: linear-gradient(to top, #857a4d 0%, #e1d486 100%);
-
-      @media (max-width:645px) {
-        width: 90%;
-        height: auto;
-        line-height: normal;
-        margin: 10px auto 15px;
-        font-size: 16px;
-        padding: 5px 10px;
-      }
-
-      @include sp {
-        font-size: 14px;
-      }
-    }
-
-    &--bold {
-      font-size: 62px;
-      font-weight: bold;
-      font-feature-settings: "palt";
-      letter-spacing: -3px;
-      margin-top: 8px;
-
-      @media (max-width:645px) {
-        font-size: 50px;
-      }
-
-      @include sp {
-        font-size: 32px;
-        letter-spacing: 0;
-      }
-
-      @include xs {
-        font-size: 20px;
-      }
-    }
-
-    &--medium02 {
-      font-size: 37px;
-      font-feature-settings: "palt";
-      letter-spacing: 0;
-      margin-top: 10px;
-
-      @media (max-width:645px) {
-        font-size: 30px;
-      }
-
-      @include sp {
-        font-size: 20px;
-      }
-
-      @include xs {
-        font-size: 14px;
-      }
-    }
-
-    &--small {
-      font-size: 24px;
-      font-weight: 600;
-      margin-top: 17px;
-      letter-spacing: 0.01em;
-
-      @media (max-width:645px) {
-        font-size: 18px;
-      }
-
-      @include sp {
-        font-size: 13px;
-      }
-    }
-
-    &--medium03 {
-      font-size: 31px;
-      font-feature-settings: "palt";
-      margin-top: 18px;
-      letter-spacing: 0.01em;
-      font-weight: 600;
-
-      @media (max-width:645px) {
-        font-size: 25px;
-      }
-
-      @include sp {
-        font-size: 18px;
-      }
-
-      @include xs {
-        font-size: 14px;
-      }
-    }
-
-    &--medium04 {
-      font-size: 30px;
-      margin-top: 20px;
-      letter-spacing: 0.01em;
-      font-weight: 600;
-
-      img {
-        @include sp {
-          width: 50px;
-        }
-
-        @include xs {
-          width: 35px;
-        }
-      }
-
-      @media (max-width:645px) {
-        font-size: 25px;
-      }
-
-      @include sp {
-        font-size: 20px;
-      }
-    }
-
-    &--xl {
-      font-size: 111px;
-      color: #7d0000;
-      margin-left: 9px;
-      font-weight: bold;
-
-      @media (max-width:645px) {
-        font-size: 80px;
-      }
-
-      @include sp {
-        font-size: 60px;
-        margin: 20px auto;
-      }
-
-      @include xs {
-        font-size: 47px;
-      }
-    }
-
-    &--medium05 {
-      font-size: 30px;
-      margin-top: 10px;
-      font-feature-settings: "palt";
-      letter-spacing: 0.01em;
-      font-weight: 600;
-      margin-top: -5px;
-      margin-bottom: 18px;
-
-      @media (max-width:645px) {
-        font-size: 22px;
-      }
-
-      @include sp {
-        font-size: 15px;
-      }
-
-      @include xs {
-        font-size: 12px;
-      }
-    }
-  }
-
-  &__list {
-    display: flex;
-    flex-wrap: wrap;
-    text-align: center;
-    margin-top: 24px;
-    margin-left: 18px;
-    width: 516px;
-
-    @media (max-width:645px) {
-      width: 100%;
-      flex-direction: column;
-      margin: 0;
-    }
-
-    &--item {
-      width: 252px;
-      height: 40px;
-      color: #fff;
-      margin: 0px 6px 6px 0;
-      line-height: 40px;
-      font-size: 20px;
-      background: #b7ab6c;
-      border: 1px solid #fff;
-      font-weight: 600;
-      letter-spacing: 0;
-      font-family: 'Yu Gothic', YuGothic, sans-serif;
-
-      @media (max-width:645px) {
-        width: 90%;
-        margin: 0 auto 10px;
-      }
-
-      @include xs {
-        font-size: 17px;
-      }
+      width: calc(834vw / (1240 / 100));
+      height: calc(1230vw / (1240 / 100));
     }
   }
 }
@@ -699,7 +383,7 @@
   width: 555px;
   margin: 0 auto;
 
-  @media (max-width:645px) {
+  @media (max-width: 645px) {
     width: 100%;
   }
 }
@@ -712,7 +396,7 @@
   font-size: 80px;
   color: #7d0000;
 
-  @media (max-width:645px) {
+  @media (max-width: 645px) {
     font-size: 50px;
   }
 
@@ -724,7 +408,7 @@
 .sixty {
   font-size: 60px;
 
-  @media (max-width:645px) {
+  @media (max-width: 645px) {
     font-size: 45px;
   }
 
@@ -736,7 +420,7 @@
 .fortyfour {
   font-size: 44px;
 
-  @media (max-width:645px) {
+  @media (max-width: 645px) {
     font-size: 35px;
   }
 
@@ -752,7 +436,7 @@
 .fiftytwo {
   font-size: 52px;
 
-  @media (max-width:645px) {
+  @media (max-width: 645px) {
     font-size: 45px;
   }
 
@@ -775,7 +459,7 @@
   overflow-wrap: normal;
   padding-top: 8px;
 
-  @media (max-width:645px) {
+  @media (max-width: 645px) {
     width: 70px;
     height: 70px;
     font-size: 25px;
@@ -785,7 +469,7 @@
 .eightyeight {
   font-size: 80px;
 
-  @media (max-width:645px) {
+  @media (max-width: 645px) {
     font-size: 60px;
   }
 
@@ -811,11 +495,11 @@
 .newline-tb {
   display: none;
 
-  @media (max-width:1060px) {
+  @media (max-width: 1060px) {
     display: inline;
   }
 
-  @media (max-width:645px) {
+  @media (max-width: 645px) {
     display: none;
   }
 }
@@ -823,7 +507,7 @@
 .newline-sp {
   display: none;
 
-  @media (max-width:645px) {
+  @media (max-width: 645px) {
     display: inline;
   }
 }
@@ -869,7 +553,7 @@
       font-size: 25px;
     }
 
-    @media (max-width:645px) {
+    @media (max-width: 645px) {
       width: 80%;
       font-size: 16px;
       height: 40px;
@@ -996,11 +680,11 @@
         width: calc(100% - 110px);
       }
 
-      @media (max-width:1028px) {
+      @media (max-width: 1028px) {
         font-size: 66px;
       }
 
-      @media (max-width:822px) {
+      @media (max-width: 822px) {
         font-size: 60px;
       }
 
@@ -1045,7 +729,7 @@
         padding: 0 10px;
       }
 
-      @media (max-width:1028px) {
+      @media (max-width: 1028px) {
         padding: 0;
       }
 
@@ -1077,14 +761,14 @@
       background: #a08c6e;
       border-bottom: 1px solid #463b2b;
       text-align: center;
-      font-family: 'Yu Gothic', YuGothic, sans-serif;
+      font-family: "Yu Gothic", YuGothic, sans-serif;
       font-weight: 400;
 
       @include pc {
         width: 48%;
       }
 
-      @media (max-width:866px) {
+      @media (max-width: 866px) {
         font-size: 14px;
       }
 
@@ -1105,14 +789,14 @@
       background: #fff;
       border-bottom: 1px solid #463b2b;
       text-align: center;
-      font-family: 'Yu Gothic', YuGothic, sans-serif;
+      font-family: "Yu Gothic", YuGothic, sans-serif;
       letter-spacing: 0;
 
       @include pc {
         width: 50%;
       }
 
-      @media (max-width:866px) {
+      @media (max-width: 866px) {
         font-size: 14px;
       }
 
@@ -1138,11 +822,11 @@
   font-feature-settings: "palt";
   letter-spacing: 0;
 
-  @media (max-width:1028px) {
+  @media (max-width: 1028px) {
     font-size: 35px;
   }
 
-  @media (max-width:822px) {
+  @media (max-width: 822px) {
     font-size: 35px;
     padding: 12px 0 8px 12px;
   }
@@ -1180,7 +864,7 @@
     font-size: 52px;
   }
 
-  @media (max-width:822px) {
+  @media (max-width: 822px) {
     font-size: 40px;
   }
 
@@ -1198,7 +882,7 @@
   padding-bottom: 50px;
 
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     bottom: 1px;
     width: 0;
@@ -1232,12 +916,12 @@
     transform: skewX(-39deg);
     margin-top: 3px;
 
-    @media (max-width:900px) {
+    @media (max-width: 900px) {
       width: 85%;
       font-size: 25px;
     }
 
-    @media (max-width:655px) {
+    @media (max-width: 655px) {
       width: 75%;
       font-size: 16px;
       height: auto;
@@ -1274,7 +958,7 @@
     border-right: 8px solid #53483a;
     border-radius: 20px 0 0 20px;
 
-    @media (max-width:1183px) {
+    @media (max-width: 1183px) {
       padding: 20px 0px 20px 40px;
       height: auto;
     }
@@ -1294,14 +978,14 @@
       font-size: 28px;
       line-height: 1.5;
       letter-spacing: 0.01em;
-      font-family: 'Yu Gothic', YuGothic, sans-serif;
+      font-family: "Yu Gothic", YuGothic, sans-serif;
       font-weight: 500;
 
       @include tb {
         font-size: 24px;
       }
 
-      @media (max-width:638px) {
+      @media (max-width: 638px) {
         font-size: 20px;
       }
 
@@ -1316,7 +1000,7 @@
     height: 338px;
     position: relative;
 
-    @media (max-width:1183px) {
+    @media (max-width: 1183px) {
       height: auto;
     }
 
@@ -1355,12 +1039,12 @@
       top: 298px;
       left: 153px;
 
-      @media(max-width:1037px) {
+      @media (max-width: 1037px) {
         top: 313px;
         left: 67px;
       }
 
-      @media(max-width:1000px) {
+      @media (max-width: 1000px) {
         top: 333px;
         left: 67px;
       }
@@ -1404,11 +1088,11 @@
   transform: rotate(52deg);
   transform-origin: calc(100% - 5px) 50%;
 
-  @media(max-width:800px) {
+  @media (max-width: 800px) {
     top: -250px;
   }
 
-  @media (max-width:655px) {
+  @media (max-width: 655px) {
     width: 40px;
     height: 8px;
     transform-origin: calc(100% - 3px) 50%;
@@ -1416,15 +1100,15 @@
     left: 15px;
   }
 
-  @media (max-width:570px) {
+  @media (max-width: 570px) {
     top: -200px;
   }
 
-  @media (max-width:480px) {
+  @media (max-width: 480px) {
     top: -150px;
   }
 
-  @media (max-width:414px) {
+  @media (max-width: 414px) {
     top: -127px;
   }
 
@@ -1438,24 +1122,24 @@
   top: -300px;
   left: -27px;
 
-  @media(max-width:800px) {
+  @media (max-width: 800px) {
     top: -250px;
   }
 
-  @media (max-width:655px) {
+  @media (max-width: 655px) {
     top: -230px;
     left: -21px;
   }
 
-  @media (max-width:570px) {
+  @media (max-width: 570px) {
     top: -200px;
   }
 
-  @media (max-width:480px) {
+  @media (max-width: 480px) {
     top: -150px;
   }
 
-  @media (max-width:414px) {
+  @media (max-width: 414px) {
     top: -127px;
   }
 
@@ -1556,7 +1240,7 @@
     letter-spacing: 0;
     background: linear-gradient(transparent 60%, #5d4c32 50%);
 
-    @media(max-width:930px) {
+    @media (max-width: 930px) {
       font-size: 40px;
     }
 
@@ -1564,11 +1248,11 @@
       font-size: 35px;
     }
 
-    @media(max-width:655px) {
+    @media (max-width: 655px) {
       font-size: 28px;
     }
 
-    @media(max-width:530px) {
+    @media (max-width: 530px) {
       font-size: 22px;
     }
 
@@ -1602,7 +1286,7 @@
         }
       }
 
-      @media(max-width:1130px) {
+      @media (max-width: 1130px) {
         width: 45%;
       }
 
@@ -1624,7 +1308,7 @@
       font-size: 25px;
     }
 
-    @media(max-width:584px) {
+    @media (max-width: 584px) {
       font-size: 16px;
     }
 
@@ -1638,7 +1322,7 @@
   color: #7d0000;
   font-size: 44px;
 
-  @media(max-width:1183px) {
+  @media (max-width: 1183px) {
     font-size: 35px;
   }
 
@@ -1646,7 +1330,7 @@
     font-size: 28px;
   }
 
-  @media (max-width:740px) {
+  @media (max-width: 740px) {
     font-size: 25px;
   }
 
@@ -1689,7 +1373,7 @@
       width: 300px;
     }
 
-    @media (max-width:645px) {
+    @media (max-width: 645px) {
       width: 90%;
       font-size: 16px;
       height: 40px;
@@ -1807,7 +1491,7 @@
     vertical-align: middle;
   }
 
-  @media (max-width:675px) {
+  @media (max-width: 675px) {
     padding-left: 18px;
   }
 
@@ -1835,7 +1519,7 @@
     vertical-align: middle;
   }
 
-  @media (max-width:675px) {
+  @media (max-width: 675px) {
     padding-left: 18px;
   }
 
@@ -1916,7 +1600,7 @@
     margin-top: 3px;
     margin-bottom: 40px;
 
-    @media (max-width:645px) {
+    @media (max-width: 645px) {
       width: 70%;
       height: 40px;
       line-height: 40px;
@@ -1971,7 +1655,7 @@
     border: 1px solid #646464;
     border-bottom: none;
 
-    @media (max-width:610px) {
+    @media (max-width: 610px) {
       width: 100%;
       padding: 30px;
     }
@@ -2006,12 +1690,23 @@
       letter-spacing: 0;
       background: #dcdbdc;
       background: -moz-linear-gradient(#dcdbdc 0%, #ffffff 50%, #dcdbdc 100%);
-      background: -webkit-gradient(linear, left top, left bottom, from(#dcdbdc), color-stop(50%, #ffffff), to(#dcdbdc));
-      background: -webkit-linear-gradient(#dcdbdc 0%, #ffffff 50%, #dcdbdc 100%);
+      background: -webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        from(#dcdbdc),
+        color-stop(50%, #ffffff),
+        to(#dcdbdc)
+      );
+      background: -webkit-linear-gradient(
+        #dcdbdc 0%,
+        #ffffff 50%,
+        #dcdbdc 100%
+      );
       background: -o-linear-gradient(#dcdbdc 0%, #ffffff 50%, #dcdbdc 100%);
       background: linear-gradient(#dcdbdc 0%, #ffffff 50%, #dcdbdc 100%);
 
-      @media (max-width:610px) {
+      @media (max-width: 610px) {
         width: 100%;
       }
     }
