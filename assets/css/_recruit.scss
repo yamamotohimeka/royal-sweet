@@ -374,7 +374,11 @@
 
     @include pc {
       width: calc(834vw / (1240 / 100));
-      height: calc(1230vw / (1240 / 100));
+      height: 100%;
+      padding-top: calc(30vw / (1240 / 100));
+    }
+    @include tab {
+      padding-top: calc(10vw / (768 / 100));
     }
   }
 }
