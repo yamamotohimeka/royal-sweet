@@ -1,0 +1,299 @@
+//schedule/////////////////////////////
+.schedule {
+  width: 100%;
+  background-image: url(../img/background.png);
+  background-color: #121212;
+  padding-bottom: 50px;
+  &__heading {
+    width: 640px;
+    margin: 0 auto;
+    padding: 50px 0 10px;
+    text-align: center;
+    font-size: 40px;
+    color: #f2dab9;
+    border-bottom: 1px solid #fff;
+    line-height: 1;
+    @include tb {
+      width: 90%;
+      font-size: 30px;
+    }
+    &--small {
+      font-size: 20px;
+      color: #f2dab9;
+      text-align: center;
+      margin: 0 auto;
+      padding: 12px 0 25px;
+    }
+  }
+}
+
+.tabs {
+  width: 1100px;
+  margin: 0 auto;
+  @include pc {
+    width: 100%;
+  }
+}
+
+.tab-flex {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  @include pc {
+    width: 90%;
+    margin: 0 auto 20px;
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+.tab-item {
+  display: inline-block;
+  width: 152px;
+  height: 60px;
+  padding: 18px 12px;
+  background: rgba($color: #000000, $alpha: 0.7);
+  text-align: center;
+  font-size: 20px;
+  @include pc {
+    margin-right: 5px;
+    font-size: 20px;
+  }
+}
+
+input[name="tab-item"] {
+  display: none;
+}
+
+.tab-content {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  &::after {
+    content: '';
+    display: block;
+    width: 338px;
+    height: 0;
+    @include pc {
+      width: 33%;
+    }
+    @include tb {
+      width: 50%;
+    }
+  }
+}
+
+.schedule-container {
+  width: 1100px;
+  padding: 0px 42px 20px;
+  margin: 0 auto;
+  background: rgba($color: #000000, $alpha: 0.7);
+  border: 1px solid #fff;
+  @include pc {
+    width: 90%;
+  }
+  @include tb {
+    padding: 0px 20px 20px;
+  }
+  @media (max-width:600px) {
+    width: 100%;
+    border-left: none;
+    border-right: none;
+  }
+  @include sp {
+    padding: 0px 10px 20px;
+  }
+  &__heading {
+    width: 640px;
+    margin: 26px auto 30px;
+    padding: 0px 0 11px;
+    text-align: center;
+    font-size: 26px;
+    color: #f2dab9;
+    border-bottom: 1px solid #fff;
+    @include tb {
+      width: 90%;
+      font-size: 22px;
+    }
+  }
+}
+
+.schedule-container {
+  display: none;
+}
+
+#mon-content {
+  display: block;
+}
+
+/* #mon:checked ~ #mon-content,
+#tue:checked ~ #tue-content,
+#wed:checked ~ #wed-content,
+#thu:checked ~ #thu-content,
+#fri:checked ~ #fri-content,
+#sat:checked ~ #sat-content,
+#sun:checked ~ #sun-content {
+  display: block;
+} */
+
+.tabs input:checked + .tab-item {
+  background-color: #7e6949;
+  color: #fff;
+}
+
+.schedule-list {
+  width: 25%;
+  margin-bottom: 20px;
+  &:hover img {
+    transform:scale(1.1,1.1);
+  }
+  @media (max-width:1240px) {
+    width: 25%;
+  }
+  @media (max-width:1000px) {
+    width: 33%;
+  }
+  @media (max-width:600px) {
+    width: 50%;
+  }
+  &__box {
+    position: relative;
+    @include pc {
+      width: 100%;
+    }
+    &--img {
+      width: 100%;
+      margin:0 auto;
+      overflow:hidden;
+      img {
+        width: 100%;
+        height: auto;
+        transition:.8s all;
+      }
+    }
+    &--bg {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      padding: 15px 25px;
+      background-color: rgba($color: #000000, $alpha: 0.6);
+      @include tb {
+        padding: 15px 5px;
+      }
+      @include sp {
+        width: 100%;
+        padding: 10px 5px;
+      }
+    }
+    &--small {
+      font-size: 14px;
+      color: #fff;
+      vertical-align: middle;
+      margin-bottom: 6px;
+      font-family: 'Yu Gothic',YuGothic,sans-serif;
+      @include sp {
+        font-size: 14px;
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  .new {
+    &::before {
+      content: "NEW";
+      font-size: 17px;
+      color: #fff;
+      display: block;
+      position: absolute;
+      top: 15px;
+      left: 0px;
+      transform: rotate(-45deg);
+      z-index: 2;
+      font-family: 'Yu Mincho',YuMincho,serif;
+      @include sp {
+        font-size: 14px;
+        top: 12px;
+      }
+    }
+    &::after {
+      content: "";
+      width: 63px;
+      height: 63px;
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 63px 63px 0 0;
+      border-color: #7b684b transparent transparent transparent;
+      z-index: 1;
+      @include sp {
+        border-width: 50px 50px 0 0;
+      }
+    }
+
+  }
+  &__fee {
+    width: 100%;
+    height: 30px;
+    color: #fff;
+    text-align: center;
+    line-height: 30px;
+    background: #7b684b;
+    margin-top: 5px;
+    font-family: 'Yu Gothic',YuGothic,sans-serif;
+    border-right: 2px solid #000;
+    @include pc {
+      width: 100%;
+      font-size: 14px;
+    }
+    @include tb {
+      width: 100%;
+      font-size: 14px;
+    }
+    @include xs {
+      width: 100%;
+      font-size: 12px;
+    }
+  }
+  &__place {
+    width: 100%;
+    height: 30px;
+    color: #7b684b;
+    text-align: center;
+    line-height: 30px;
+    background: #fff;
+    border: 2px solid #7b684b;
+    box-sizing: border-box;
+    margin-top: 5px;
+    font-family: 'Yu Gothic',YuGothic,sans-serif;
+    @include pc {
+      width: 100%;
+      font-size: 14px;
+    }
+    @include tb {
+      width: 100%;
+      font-size: 14px;
+    }
+    @include xs {
+      width: 100%;
+      font-size: 12px;
+    }
+  }
+}
+
+	//スケジュール切り替え
+	.day1,
+	.day2,
+	.day3,
+	.day4,
+	.day5,
+	.day6
+		{
+		display: none;
+	}

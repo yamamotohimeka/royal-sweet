@@ -1,0 +1,33 @@
+.user-admin-color-wrap,
+.user-rich-editing-wrap,
+.user-comment-shortcuts-wrap,
+.user-language-wrap,
+.user-admin-bar-front-wrap,
+.user-url-wrap,
+.user-facebook-wrap,
+.user-instagram-wrap,
+.user-linkedin-wrap,
+.user-myspace-wrap,
+.user-pinterest-wrap,
+.user-soundcloud-wrap,
+.user-tumblr-wrap,
+.user-twitter-wrap,
+.user-youtube-wrap,
+.user-wikipedia-wrap,
+.user-syntax-highlighting-wrap,
+#your-profile h2,
+#attmgr_ex_fields_title,
+#attmgr_ex_fields {
+  display: none;
+}
+
+.user-aioseo_contact_methods_header-wrap,
+.user-aioseo_twitter-wrap,
+.user-aioseo_facebook-wrap,
+.application-passwords {
+  display: none !important;
+}
+
+input[type="number"][id*="acf"] {
+  max-width: 80px !important;
+}

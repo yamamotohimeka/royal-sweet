@@ -1,0 +1,64 @@
+//////////////////////
+//共通スタイル
+//////////////////////
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+}
+
+a {
+	color: #000;
+	text-decoration: none;
+	transition: all 0.2s;
+
+	&:hover {
+		color: #888;
+	}
+}
+
+li {
+	list-style-type: none;
+}
+
+body {
+	font-variant-ligatures: none;
+	color: #000;
+	font-family: "游明朝", serif;
+}
+
+img {
+	max-width: 100%;
+}
+
+.content-wrap {
+	max-width: 1100px;
+	@include center; //センタリングmixin
+
+	//メディアクエリmixin
+	@include mq(1200) {
+		max-width: 90%;
+	}
+}
+
+.flex {
+	display: flex;
+}
+
+.attmgr_admin_scheduler {
+	width: 100%;
+	color: #fff;
+	border: 1px solid #ddd;
+	tr:first-child {
+		position: sticky;
+		top: 30px;
+		color: #fff;
+		background-color: #92774F;
+		z-index: 99;
+	}
+	th {
+		padding: 16px 0;
+		transition: 0.3s ease;
+		border: 1px solid #ddd;
+	}
+}
