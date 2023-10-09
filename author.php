@@ -38,33 +38,35 @@
                 <div class="profile-box__left--thumb">
                   <?php $ctm = get_field('subimage1'); ?>
                   <?php if (!empty($ctm)) : ?>
-                    <img src="<?php the_field('subimage1'); ?>" alt="">
+                  <img src="<?php the_field('subimage1'); ?>" alt="">
                   <?php endif; ?>
                 </div>
                 <div class="profile-box__left--thumb">
                   <?php $ctm = get_field('subimage2'); ?>
                   <?php if (!empty($ctm)) : ?>
-                    <img src="<?php the_field('subimage2'); ?>" alt="">
+                  <img src="<?php the_field('subimage2'); ?>" alt="">
                   <?php endif; ?>
                 </div>
               </div><!-- .profile-flex -->
 
-              <p class="profile-box__tablet--large touch-area"><?= $userData->display_name ?>(<?php echo $userData->fage; ?>)</p>
+              <p class="profile-box__tablet--large touch-area">
+                <?= $userData->display_name ?>(<?php echo $userData->fage; ?>)</p>
               <div class="profile-box__flex touch-area">
                 <p class="profile-box__tablet--medium">T:<?php echo $userData->staff_tall; ?></p>
                 <p class="profile-box__tablet--bg-gold">指名料+<?php echo $userData->extra_fee; ?></p>
               </div>
               <p class="profile-box__tablet--small touch-area">
-                <?php echo $userData->user_description; ?>
-              </p>
+                <?php echo nl2br($userData->user_description); ?></p>
 
               <table class="profile-box__table touch-area">
                 <caption class="profile-box__table--medium">出勤予定</caption>
                 <tbody>
                   <?php for ($i = 0; $i < 7; $i++) : ?>
-                    <tr>
-                      <th class="profile-box__table--date"><?php echo date('m/d', strtotime('+' . $i . 'day', current_time('timestamp'))) . "(" . $week[date('w', strtotime('+' . $i . 'day', current_time('timestamp')))] . ")" ?></th>
-                      <!-- <td class="profile-box__table--place">
+                  <tr>
+                    <th class="profile-box__table--date">
+                      <?php echo date('m/d', strtotime('+' . $i . 'day', current_time('timestamp'))) . "(" . $week[date('w', strtotime('+' . $i . 'day', current_time('timestamp')))] . ")" ?>
+                    </th>
+                    <!-- <td class="profile-box__table--place">
                         <?php
                         if ($rows) {
                           foreach ($rows as $val) {
@@ -80,8 +82,8 @@
                         }
                         ?>
                       </td> -->
-                      <td class="profile-box__table--time touch-area">
-                        <?php
+                    <td class="profile-box__table--time touch-area">
+                      <?php
                         if ($rows) {
                           foreach ($rows as $val) {
                             ///////////////ここから時間変換
@@ -102,8 +104,8 @@
                           echo "-";
                         }
                         ?>
-                      </td>
-                    </tr>
+                    </td>
+                  </tr>
                   <?php endfor; ?>
                 </tbody>
               </table>
@@ -116,15 +118,17 @@
                 <p class="profile-box__right--bg-gold">指名料+<?php echo $userData->extra_fee; ?></p>
               </div>
               <p class="profile-box__right--small">
-                <?php echo $userData->user_description; ?>
+
+                <?php echo nl2br($userData->user_description); ?>
               </p>
               <div class="prof-twitter">
                 <div class="prof-timeline">
                   <?php if (get_field('twitter')) : ?>
-                    <div class="twitter">
-                      <a class="twitter-timeline" data-tweet-limit="10" data-chrome="nofooter" data-chrome="noheader" data-lang="ja" width="100%" href="<?php the_field('twitter'); ?>"></a>
-                      <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-                    </div>
+                  <div class="twitter">
+                    <a class="twitter-timeline" data-tweet-limit="10" data-chrome="nofooter" data-chrome="noheader"
+                      data-lang="ja" width="100%" href="<?php the_field('twitter'); ?>"></a>
+                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                  </div>
                   <?php endif; ?>
                 </div><!-- .prof-timeline -->
               </div><!-- .prof-twitter -->
