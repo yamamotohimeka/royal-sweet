@@ -57,20 +57,20 @@
           $the_query = new WP_Query($args);
           if ($the_query->have_posts()) :
             while ($the_query->have_posts()) : $the_query->the_post(); ?>
-              <div class="swiper-slide">
-                <div class="swiper-slide__img">
-                  <img src="<?php the_field('bnr-image'); ?>" alt="">
-                </div>
-              </div>
-            <?php endwhile;
-          else : ?>
-            <div>
+          <div class="swiper-slide">
+            <div class="swiper-slide__img">
+              <img src="<?php the_field('bnr-image'); ?>" alt="">
             </div>
-          <?php endif;
-          ?>
+          </div>
+          <?php endwhile; else : ?>
+          <div>
+          </div>
+          <?php endif;?>
         </div>
-        <div class="swiper-button-prev"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/arrow-prev.png" alt="alt"></div>
-        <div class="swiper-button-next"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/arrow-next.png" alt="alt"></div>
+        <div class="swiper-button-prev"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/arrow-prev.png"
+            alt="alt"></div>
+        <div class="swiper-button-next"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/arrow-next.png"
+            alt="alt"></div>
       </div>
 
       <div class="gold-border"></div>
@@ -91,20 +91,20 @@
                   $user_id = $newuser->ID;
                   if ($newuser->newface == true && $newuser->attmgr_ex_attr_staff == true) { //チェックボックスが入力あるか
                 ?>
-                    <div class="swiper-slide">
-                      <?php print('<a href="' . home_url() . '?author=' . $user_id . '" class="expand-link">'); ?>
-                      <div class="swiper-slide__img">
-                        <?= get_avatar($user_id, 420); ?>
-                      </div>
-                      <!-- <p class="swiper-slide__title">入店日：<?php $date = $newuser->date;
+                <div class="swiper-slide">
+                  <?php print('<a href="' . home_url() . '?author=' . $user_id . '" class="expand-link">'); ?>
+                  <div class="swiper-slide__img">
+                    <?= get_avatar($user_id, 420); ?>
+                  </div>
+                  <!-- <p class="swiper-slide__title">入店日：<?php $date = $newuser->date;
                                                               $date2 = strtotime($date);
                                                               $date3 = $week[date('w', $date2)];
                                                               echo date('n月j日', $date2);
                                                               print '(' . $date3 . ')'; ?></p> -->
-                      <p class="swiper-slide__title--small"><?= $newuser->display_name ?></p>
-                      <p class="swiper-slide__title--small">（<?= $newuser->fage ?>）</p>
-                      </a>
-                    </div>
+                  <p class="swiper-slide__title--small"><?= $newuser->display_name ?></p>
+                  <p class="swiper-slide__title--small">（<?= $newuser->fage ?>）</p>
+                  </a>
+                </div>
                 <?php
                   }
                 }
@@ -148,27 +148,27 @@
                     if ($val->date === $day && !empty(get_the_author_meta('display_name', $val->staff_id))) { //当日の一致と削除されたユーザーの判定
                       $count += 1;
                 ?>
-                      <div class="girls <?php echo "day" . $k; ?>">
-                        <?php print('<a href="' . home_url() . '?author=' . $val->staff_id . '" class="expand-link">'); ?>
-                        <div class="girls__box <?php if ($newface) echo 'new'; ?>">
-                          <div class="girls__box--img"><?= get_avatar($val->staff_id, 420); ?></div>
-                          <div class="girls__box--bg">
-                            <p class="girls__box--small">
-                              <?= get_the_author_meta('display_name', $val->staff_id) ?>（<?= get_the_author_meta('fage', $val->staff_id) ?>）
-                            </p>
-                            <p class="girls__box--small">
-                              <?= $startTime ?>～<?= $endTime ?>
-                            </p>
-                          </div><!-- .girls__box--bg -->
-                        </div><!-- .girls__box -->
-                        <p class="girls__fee">
-                          指名料+<?= get_the_author_meta('extra_fee', $val->staff_id) ?>円
-                        </p>
-                        <!-- <p class="girls__place">
+                <div class="girls <?php echo "day" . $k; ?>">
+                  <?php print('<a href="' . home_url() . '?author=' . $val->staff_id . '" class="expand-link">'); ?>
+                  <div class="girls__box <?php if ($newface) echo 'new'; ?>">
+                    <div class="girls__box--img"><?= get_avatar($val->staff_id, 420); ?></div>
+                    <div class="girls__box--bg">
+                      <p class="girls__box--small">
+                        <?= get_the_author_meta('display_name', $val->staff_id) ?>（<?= get_the_author_meta('fage', $val->staff_id) ?>）
+                      </p>
+                      <p class="girls__box--small">
+                        <?= $startTime ?>～<?= $endTime ?>
+                      </p>
+                    </div><!-- .girls__box--bg -->
+                  </div><!-- .girls__box -->
+                  <p class="girls__fee">
+                    指名料+<?= get_the_author_meta('extra_fee', $val->staff_id) ?>円
+                  </p>
+                  <!-- <p class="girls__place">
                           <?= $val->workplace ?>
                         </p> -->
-                        </a>
-                      </div><!-- .girls -->
+                  </a>
+                </div><!-- .girls -->
                 <?php
                     } elseif ($val == end($rows) && $count == 0) {
                       // 出勤情報なし

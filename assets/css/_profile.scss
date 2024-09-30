@@ -103,7 +103,7 @@
       left: 7px;
       transform: rotate(-45deg);
       z-index: 2;
-      font-family: 'Yu Mincho',YuMincho,serif;
+      font-family: "Yu Mincho", YuMincho, serif;
       @include tb {
         font-size: 17px;
         top: 15px;
@@ -130,9 +130,9 @@
     }
   }
 
-  &__table{
+  &__table {
     width: 100%;
-    font-family: 'Yu Gothic',YuGothic,sans-serif;
+    font-family: "Yu Gothic", YuGothic, sans-serif;
     border-collapse: separate;
     border-spacing: 0px 8px;
     &--medium {
@@ -199,7 +199,7 @@
     }
     &--large {
       font-size: 24px;
-      @media (max-width:980px){
+      @media (max-width: 980px) {
         font-size: 20px;
       }
       @include tb {
@@ -210,7 +210,7 @@
       font-size: 20px;
       padding: 5px 0;
       margin-bottom: 17px;
-      @media (max-width:980px){
+      @media (max-width: 980px) {
         font-size: 16px;
       }
       @include tb {
@@ -229,7 +229,7 @@
     }
     &--small {
       font-size: 16px;
-      font-family: 'Yu Gothic',YuGothic,sans-serif;
+      font-family: "Yu Gothic", YuGothic, sans-serif;
       margin: 17px auto 25px;
       line-height: 1.5;
       @include tb {
@@ -240,7 +240,7 @@
   &__flex {
     display: flex;
     justify-content: space-between;
-    @media (max-width:980px){
+    @media (max-width: 980px) {
       flex-direction: column;
     }
     @include tb {
@@ -270,7 +270,7 @@
         padding: 5px 0;
         margin-bottom: 17px;
       }
-      @media (max-width:480px){
+      @media (max-width: 480px) {
         font-size: 16px;
       }
     }
@@ -295,7 +295,7 @@
       @include tb {
         display: block;
         ffont-size: 16px;
-        font-family: 'Yu Gothic',YuGothic,sans-serif;
+        font-family: "Yu Gothic", YuGothic, sans-serif;
         margin: 17px auto 0px;
         line-height: 1.5;
       }
@@ -332,4 +332,3 @@
   max-height: 915px;
   overflow-y: scroll;
 }
-
