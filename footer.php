@@ -24,11 +24,31 @@
             </ul>
           </nav>
           <div class="banner-flex">
-            <div class="banner-flex__img"><a href="https://osaka.refle.info/" target="_blank" rel="noopener noreferrer"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/banner01.png" alt="リフナビ大阪"></a></div>
-            <div class="banner-flex__img"><a href="https://tokyo.aroma-tsushin.com/" target="_blank" rel="noopener noreferrer"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/banner02.png" alt="大阪アロマパンダ通信"></a></div>
-            <div class="banner-flex__img"><a href="https://panda-job.com/" target="_blank" rel="noopener noreferrer"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/banner03.png" alt="パンダエステショップ"></a></div>
-            <div class="banner-flex__img"><a href="https://eslove.jp/kansai/osaka" target="_blank"><img src="https://eslove.jp/eslove_front_theme/banner/banner_200x40.jpg" alt="大阪のメンズエステ情報ならエステラブ"/></a></div>
-            <div class="banner-flex__img"><a href="https://job.eslove.jp/kansai/osaka" target="_blank"><img src="https://job.eslove.jp/eslove_job_front_theme/banner/banner_200x40.jpg" alt="大阪のメンズエステ求人情報ならエステラブワーク"/></a></div>
+            <div class="banner-flex__img"><a href="https://osaka.refle.info/" target="_blank"
+                rel="noopener noreferrer"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/banner01.png"
+                  alt="リフナビ大阪"></a></div>
+            <div class="banner-flex__img"><a href="https://tokyo.aroma-tsushin.com/" target="_blank"
+                rel="noopener noreferrer"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/banner02.png"
+                  alt="大阪アロマパンダ通信"></a></div>
+            <div class="banner-flex__img"><a href="https://panda-job.com/" target="_blank"
+                rel="noopener noreferrer"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/banner03.png"
+                  alt="パンダエステショップ"></a></div>
+            <div class="banner-flex__img"><a href="https://eslove.jp/kansai/osaka" target="_blank"><img
+                  src="https://eslove.jp/eslove_front_theme/banner/banner_200x40.jpg" alt="大阪のメンズエステ情報ならエステラブ" /></a>
+            </div>
+            <div class="banner-flex__img"><a href="https://job.eslove.jp/kansai/osaka" target="_blank"><img
+                  src="https://job.eslove.jp/eslove_job_front_theme/banner/banner_200x40.jpg"
+                  alt="大阪のメンズエステ求人情報ならエステラブワーク" /></a></div>
+            <div>
+              <a href="https://www.kking.jp/ippan/220719/" title="メンズエステ・マッサージ エステアイ" target="_blank">
+                <img src="https://www.kking.jp/img/esuteai200.gif" width="200" height="40"
+                  alt="メンズエステ・マッサージ エステアイ" /></a>
+            </div>
+            <div>
+              <a href="https://www.kking.jp/job/71401/" title="メンズエステ・マッサージ エステアイ" target="_blank">
+                <img src="https://www.kking.jp/img/esuteai200.gif" width="200" height="40"
+                  alt="メンズエステ・マッサージ エステアイ" /></a>
+            </div>
           </div>
         </div><!-- footer-left -->
 
@@ -36,10 +56,17 @@
           <div class="footer__right--flex">
             <div>
 
-              <p class="footer__right--medium gothic"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/tell.png" alt="tell"><span class="footer__right--small">TEL<span class="none-colon">:</span></span><a href="tel:08092994519" class="sp-block">080-9299-4519</a></p>
-              <p class="footer__right--medium gothic"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/LINE.png" alt="tell"><span class="footer__right--small">LINE ID<span class="none-colon">:</span></span><span class="sp-block">royal-sweet</span></p>
+              <p class="footer__right--medium gothic"><img
+                  src="<?php echo get_template_directory_uri(); ?>/assets/img/tell.png" alt="tell"><span
+                  class="footer__right--small">TEL<span class="none-colon">:</span></span><a href="tel:090-4236-1960"
+                  class="sp-block">090-4236-1960</a></p>
+              <p class="footer__right--medium gothic"><img
+                  src="<?php echo get_template_directory_uri(); ?>/assets/img/LINE.png" alt="tell"><span
+                  class="footer__right--small">LINE ID<span class="none-colon">:</span></span><span
+                  class="sp-block">royal-sweet</span></p>
             </div>
-            <div class="qr-icon"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/qrcode.png" alt="qr"></div>
+            <div class="qr-icon"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/qrcode.png" alt="qr">
+            </div>
           </div>
         </div><!-- .footer__right -->
       </div>
@@ -47,7 +74,7 @@
   </footer>
   <ul class="footer-sp-listwrap">
     <li class="footer-sp-list">
-      <a href="tel:08092994519">
+      <a href="tel:090-4236-1960">
         <div class="footer-sp-list-img">
           <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-tel.png" alt="電話アイコン">
         </div>
@@ -63,7 +90,7 @@
       </a>
     </li>
     <li class="footer-sp-list">
-      <a href="sms:08092994519">
+      <a href="sms:090-4236-1960">
         <div class="footer-sp-list-img">
           <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-sms.png" alt="SMSアイコン">
         </div>
@@ -76,28 +103,28 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/js/swiper.min.js"></script>
   <script src="<?php echo get_template_directory_uri(); ?>/assets/js/common.js"></script>
   <script>
-    $(function(){
-      var target = $('.attmgr_admin_scheduler tr:first-child');
-      var flag = true;
-      if(target.length) {
-        $('.fixed-button').hide(0);
-        $(window).on('load scroll resize', function(){
-          if(flag){
-            flag = false;
-            var target_position = $('.attmgr_admin_scheduler').offset().top;
-            setTimeout(function() {
-              var sp = parseInt( $(window).scrollTop() );
-              if(sp>target_position) {
-                target.addClass('fixed');
-              } else {
-                target.removeClass('fixed');
-              }
-              flag = true;
-              return flag;
-            }, 300);
+$(function() {
+  var target = $('.attmgr_admin_scheduler tr:first-child');
+  var flag = true;
+  if (target.length) {
+    $('.fixed-button').hide(0);
+    $(window).on('load scroll resize', function() {
+      if (flag) {
+        flag = false;
+        var target_position = $('.attmgr_admin_scheduler').offset().top;
+        setTimeout(function() {
+          var sp = parseInt($(window).scrollTop());
+          if (sp > target_position) {
+            target.addClass('fixed');
+          } else {
+            target.removeClass('fixed');
           }
-        });
+          flag = true;
+          return flag;
+        }, 300);
       }
     });
+  }
+});
   </script>
   <?php wp_footer(); ?>
