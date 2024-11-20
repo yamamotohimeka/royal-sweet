@@ -49,6 +49,9 @@
                 <img src="https://www.kking.jp/img/esuteai200.gif" width="200" height="40"
                   alt="メンズエステ・マッサージ エステアイ" /></a>
             </div>
+            <a href="https://menesth-job.jp/25/" target="_blank">
+              <img alt="大阪府でメンズエステ求人を探すなら「リラクジョブ」にお任せ！" width="200" height="40"
+                src="https://dv6drgre1bci1.cloudfront.net/systemfiles.ranking-deli-kyujin.jp/menesth-job/assets/img/user/link/20040_rj.jpg" /></a>
           </div>
         </div><!-- footer-left -->
 
