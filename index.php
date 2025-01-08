@@ -180,21 +180,22 @@
             </div><!-- .ommuting__box -->
           </div><!-- .commuting -->
 
-          <aside class="sidebar touch-area">
+          <!--   <aside class="sidebar touch-area">
 
             <div class="twitter">
               <p class="twitter__heading">ツイッター</p>
               <div class="timeline">
                 <a class="twitter-timeline" href="https://twitter.com/RoyalSweet13">Tweets by TwitterJP</a>
                 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-              </div><!-- .timeline -->
-            </div><!-- .twitter -->
-          </aside>
-        </div><!-- .info-wrapper -->
-      </section><!-- .information -->
-      <div class="gold-border"></div>
-    </main>
-    <?php include('footer.php'); ?>
+              </div> .timeline -->
+        </div>
+        <!-- .twitter 
+        </aside>-->
+  </div><!-- .info-wrapper -->
+  </section><!-- .information -->
+  <div class="gold-border"></div>
+  </main>
+  <?php include('footer.php'); ?>
 </body>
 
 </html>
