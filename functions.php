@@ -18,15 +18,15 @@ add_action('admin_menu', 'admin_attend_manage_menu');
 function admin_analytics_menu_link()
 {
 ?>
-  <script>
-    jQuery(function($) {
-      var menu_slug = 'attendance_manage';
-      $('a.toplevel_page_' + menu_slug).prop({
-        href: "../admin_scheduler/",
-        target: "_blank"
-      });
-    });
-  </script>
+<script>
+jQuery(function($) {
+  var menu_slug = 'attendance_manage';
+  $('a.toplevel_page_' + menu_slug).prop({
+    href: "../admin_scheduler/",
+    target: "_blank"
+  });
+});
+</script>
 <?php
 }
 
@@ -35,20 +35,20 @@ add_action('admin_print_footer_scripts', 'admin_analytics_menu_link');
 function hidden_checkbox()
 {
 ?>
-  <script>
-    // hidden checkbox relations
-    jQuery(function($) {
-      var check = $('[data-name="attmgr_ex_attr_staff"]');
-      if (check) {
-        var checktf = check.find('input[type="checkbox"]').prop('checked');
-        if (checktf = true) {
-          $('#attmgr_ex_attr_staff').prop('checked', true);
-        } else {
-          $('#attmgr_ex_attr_staff').prop('checked', false);
-        }
-      }
-    });
-  </script>
+<script>
+// hidden checkbox relations
+jQuery(function($) {
+  var check = $('[data-name="attmgr_ex_attr_staff"]');
+  if (check) {
+    var checktf = check.find('input[type="checkbox"]').prop('checked');
+    if (checktf = true) {
+      $('#attmgr_ex_attr_staff').prop('checked', true);
+    } else {
+      $('#attmgr_ex_attr_staff').prop('checked', false);
+    }
+  }
+});
+</script>
 <?php
 }
 add_action("admin_print_footer_scripts-user-new.php", 'hidden_checkbox');
@@ -56,15 +56,15 @@ add_action("admin_print_footer_scripts-user-new.php", 'hidden_checkbox');
 function sortable_userlist()
 {
 ?>
-  <script src="js/jquery-ui.min.js"></script>
-  <script src="js/sort-user.js"></script>
-  <style>
-    .ui-sortable-helper {
-      width: 100%;
-      white-space: nowrap;
-      box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.1);
-    }
-  </style>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/sort-user.js"></script>
+<style>
+.ui-sortable-helper {
+  width: 100%;
+  white-space: nowrap;
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.1);
+}
+</style>
 <?php
 }
 add_action("admin_print_footer_scripts-users.php", 'sortable_userlist');
@@ -121,10 +121,10 @@ add_action('template_redirect', 'author_archive_redirect');
 function lastfirst_name()
 {
 ?><script>
-    jQuery(function($) {
-      $('#last_name').closest('tr').after($('#first_name').closest('tr'));
-    });
-  </script>
+jQuery(function($) {
+  $('#last_name').closest('tr').after($('#first_name').closest('tr'));
+});
+</script>
 <?php
 }
 add_action('admin_footer-user-new.php', 'lastfirst_name');
@@ -132,3 +132,12 @@ add_action('admin_footer-user-edit.php', 'lastfirst_name');
 add_action('admin_footer-profile.php', 'lastfirst_name');
 
 ?>
+
+<?php // ユーザー一覧のアバターを非表示にする
+add_action('admin_head', function() {
+    echo '<style>
+        .column-username .avatar {
+            display: none !important;
+        }
+    </style>';
+});
