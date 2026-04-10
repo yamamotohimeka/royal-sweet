@@ -1,0 +1,308 @@
+//schedule/////////////////////////////
+.system {
+  width: 100%;
+  background-image: url(../img/background.png);
+  background-color: #121212;
+  padding-bottom: 50px;
+
+  &__heading {
+    width: 640px;
+    margin: 0 auto;
+    padding: 50px 0 10px;
+    text-align: center;
+    font-size: 40px;
+    color: #f2dab9;
+    line-height: 1;
+    border-bottom: 1px solid #fff;
+
+    @include tb {
+      width: 90%;
+      font-size: 30px;
+    }
+
+    &--small {
+      font-size: 20px;
+      color: #f2dab9;
+      text-align: center;
+      margin: 0 auto;
+      padding: 12px 0 46px;
+    }
+  }
+}
+
+.system-container {
+  width: 1100px;
+  padding: 50px 50px 15px;
+  margin: 0 auto;
+  background: rgba($color: #000000, $alpha: 0.7);
+  border: 1px solid #fff;
+
+  @include pc {
+    width: 90%;
+  }
+
+  @include tb {
+    padding: 50px 30px 15px;
+  }
+
+  @include sp {
+    padding: 50px 15px 15px;
+  }
+
+  &__desc {
+    width: 1000px;
+    margin: 0 auto;
+
+    @include pc {
+      width: 90%;
+    }
+
+    @include xs {
+      width: 95%;
+    }
+
+    &--large {
+      width: 600px;
+      font-size: 30px;
+      color: #f2dab9;
+      padding-bottom: 5px;
+      border-bottom: 1px solid #fff;
+      margin-top: 5px;
+
+      @include pc {
+        width: 60%;
+      }
+
+      @media(max-width:980px) {
+        width: 70%;
+      }
+
+      @include tb {
+        font-size: 24px;
+        width: 100%;
+      }
+
+      @media(max-width:600px) {
+        font-size: 18px;
+      }
+    }
+
+    &--medium {
+      margin: 0 auto 45px;
+      font-size: 17px;
+      color: #f2dab9;
+      line-height: 1.7;
+      font-family: 'Yu Gothic', YuGothic, sans-serif;
+
+      @include tb {
+        margin: 0 auto 30px;
+      }
+
+      @media(max-width:600px) {
+        font-size: 14px;
+      }
+
+      @include sp {
+        margin: 0 auto 15px;
+      }
+
+      li {
+        line-height: 1.75;
+      }
+    }
+  }
+
+  &__table {
+    width: 1000px;
+    border-collapse: separate;
+    border-spacing: 0px 19px;
+    color: #f2dab9;
+    &--option {
+      width: 70%;
+      margin: 0 auto;
+      border-collapse: separate;
+      border-spacing: 0px 19px;
+      color: #f2dab9;
+      @include tb {
+        width: 100%;
+        text-align: center;
+      }
+    }
+
+    @include pc {
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    &--left {
+      width: 330px;
+      height: 100px;
+      font-size: 30px;
+      font-weight: lighter;
+      text-align: center;
+      vertical-align: middle;
+      background-size: auto auto;
+      background-color: #020202;
+      background-image: repeating-linear-gradient(-45deg, transparent, transparent 2px, rgba(38, 38, 38, 1) 4px, rgba(38, 38, 38, 1) 2px);
+      border: 1px solid #fff;
+
+      @include pc {
+        width: 33%;
+      }
+
+      @media(max-width:980px) {
+        font-size: 24px;
+      }
+
+      @media(max-width:800px) {
+        width: 40%;
+      }
+
+      @include tb {
+        width: 100%;
+        line-height: 100px;
+        text-align: center;
+        display: block;
+      }
+
+      @include sp {
+        height: 70px;
+        line-height: 70px;
+      }
+      &--small {
+        font-size: 22px;
+        @include tb {
+          width: 100%;
+          font-size: 20px;
+          text-align: center;
+          display: block;
+        }  
+        .system-container__table--large {
+          font-size: 40px;
+          @media (max-width:980px) {
+            font-size: 32px;
+          }
+          @include sp {
+            font-size: 26px;
+          }    
+        }
+      }
+    }
+
+    &--right {
+      width: 680px;
+      height: 100px;
+      font-size: 30px;
+      font-weight: lighter;
+      text-align: center;
+      vertical-align: middle;
+      border: 1px solid #fff;
+      border-left: none;
+      background: #000;
+
+      @include pc {
+        width: 67%;
+      }
+
+      @media(max-width:800px) {
+        width: 60%;
+      }
+
+      @include tb {
+        width: 100%;
+        line-height: 100px;
+        text-align: center;
+        display: block;
+        border: 1px solid #fff;
+        border-top: none;
+      }
+
+      @include sp {
+        height: 70px;
+        line-height: 70px;
+      }
+      &--small {
+        @include tb {
+          width: 100%;
+          line-height: 40px;
+          text-align: center;
+          display: block;
+        }  
+        .system-container__table--xl {
+          font-size: 40px;
+          @media (max-width:980px) {
+            font-size: 32px;
+          }
+          @include sp {
+            font-size: 26px;
+          }    
+        }
+      }
+    }
+
+    &--xl {
+      font-size: 70px;
+      font-weight: lighter;
+
+      @media (max-width:980px) {
+        font-size: 55px;
+      }
+
+      @include sp {
+        font-size: 36px;
+      }
+    }
+
+    &--large {
+      font-size: 50px;
+
+      @media (max-width:980px) {
+        font-size: 40px;
+      }
+
+      @include sp {
+        font-size: 32px;
+      }
+    }
+  }
+}
+
+.bottom-space {
+  margin-bottom: 35px;
+}
+
+.top-space {
+  margin-top: 30px;
+}
+
+.font-adjust {
+  @media(max-width:1160px) {
+    font-size: 45px;
+  }
+
+  @media(max-width:1060px) {
+    font-size: 40px;
+  }
+
+  @media(max-width:980px) {
+    font-size: 35px;
+  }
+
+  @media(max-width:860px) {
+    font-size: 30px;
+  }
+
+  @include tb {
+    font-size: 40px;
+  }
+
+  @include sp {
+    font-size: 32px;
+  }
+}
+
+.br-hidden {
+  @include sp {
+    display: none;
+  }
+}

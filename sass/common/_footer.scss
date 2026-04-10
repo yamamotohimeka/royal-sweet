@@ -1,0 +1,386 @@
+@charset "UTF-8";
+
+
+//footer////////////////////////////////////
+.footer-container {
+  width: 90%;
+  margin: 0 auto;
+
+  &-content {
+    display: flex;
+    justify-content: space-between;
+    width: 1100px;
+    margin: 0 auto;
+
+    @media (max-width: 1100px) {
+      flex-direction: column;
+    }
+
+    @include pc {
+      width: 95%;
+    }
+
+    @media (max-width: 600px) {
+      width: 95%;
+    }
+  }
+}
+
+.footer {
+  padding: 50px 0;
+  background: #000;
+
+  &__left {
+    width: 540px;
+
+    @include pc {
+      width: 55%;
+    }
+
+    @media (max-width: 1100px) {
+      width: 700px;
+      margin: 0 auto;
+    }
+
+    @include tb {
+      width: 95%;
+    }
+
+    @media (max-width: 600px) {
+      width: 100%;
+    }
+
+    &--flex {
+      display: flex;
+      justify-content: space-between;
+
+      @media (max-width: 600px) {
+        flex-direction: column;
+      }
+    }
+
+    &--logo {
+      width: 190px;
+
+      @media (max-width: 600px) {
+        margin: 0 auto 10px;
+        max-width: auto;
+        width: 80%;
+        text-align: center;
+      }
+    }
+
+    &--small {
+      font-size: 18px;
+      color: #fff;
+      margin-bottom: 5px;
+      line-height: 5.5;
+
+      @media (max-width: 600px) {
+        width: 80%;
+        margin: 30px auto;
+        font-size: 16px;
+        line-height: 1.5;
+        text-align: center;
+      }
+
+      @include sp {
+        width: 90%;
+      }
+    }
+  }
+
+  &__right {
+    position: relative;
+    width: 495px;
+    height: 173px;
+    border: 1px solid #fff;
+
+    @include pc {
+      width: 42%;
+    }
+
+    @media (max-width: 1100px) {
+      width: 700px;
+      margin: 0 auto;
+    }
+
+    @include tb {
+      display: none;
+      width: 95%;
+    }
+
+    // @media(max-width:600px){
+    //   width: 80%;
+    //   height: 235px;
+    // }
+    // @media(max-width:440px){
+    //   height: 296px;
+    // }
+    // @include sp {
+    //   width: 90%;
+    // }
+    &--flex {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 385px;
+      display: flex;
+      justify-content: space-between;
+
+      @media (max-width: 600px) {
+        top: 20px;
+        left: 40px;
+        transform: translate(0, 0);
+        flex-direction: column;
+        width: 80%;
+      }
+
+      @media (max-width: 460px) {
+        left: 28px;
+        width: 90%;
+      }
+
+      @media (max-width: 350px) {
+        top: 20px;
+        left: 20px;
+        transform: translate(0, 0);
+        flex-direction: column;
+        width: 80%;
+      }
+    }
+
+    &--medium {
+      font-size: 25px;
+      color: #fff;
+      margin-bottom: 15px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      img {
+        width: 33px;
+        margin-right: 10px;
+
+        @media (max-width: 600px) {
+          width: 25px;
+        }
+      }
+
+      a {
+        color: #fff;
+      }
+    }
+
+    &--small {
+      font-size: 15px;
+      color: #fff;
+
+      @media (max-width: 600px) {
+        display: inline-block;
+        margin: 0 auto 0 auto;
+      }
+    }
+  }
+}
+
+.time {
+  font-size: 15px;
+  text-align: center;
+  background: #7b684b;
+  padding: 5px 30px;
+  margin-right: 10px;
+
+  @media (max-width: 600px) {
+    width: 100%;
+    display: block;
+    margin: 20px 100px 10px 0;
+    padding: 5px 10px;
+    font-size: 12px;
+  }
+}
+
+.sp-block {
+  @include sp {
+    display: block;
+    margin-top: 10px;
+  }
+
+  @include xs {
+    font-size: 20px;
+  }
+}
+
+.qr-icon {
+  @media (max-width: 600px) {
+    margin-top: 30px;
+  }
+}
+
+.footer-nav {
+  width: 100%;
+  margin: 30px auto 10px;
+  border-bottom: 1px solid #ceab76;
+  padding-bottom: 12px;
+
+  @include tb {
+    display: none;
+  }
+
+  @media (max-width: 600px) {
+    border-bottom: 0px solid #000;
+  }
+}
+
+.footer-navlist {
+  font-size: 11px;
+  display: flex;
+  justify-content: space-around;
+
+  @media (max-width: 600px) {
+    width: 70%;
+    margin: 0 auto;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    font-size: 14px;
+  }
+
+  @include tb {
+    display: none;
+  }
+
+  @include sp {
+    width: 90%;
+  }
+
+  li {
+    @media (max-width: 600px) {
+      width: 49%;
+      margin: 10px 0;
+      text-align: center;
+      border-bottom: 1px solid #7b684b;
+      padding-bottom: 10px;
+    }
+
+    a {
+      color: #fff;
+    }
+  }
+}
+
+.banner-flex {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  @media (max-width: 1100px) {
+    width: 600px;
+    margin: 20px auto;
+  }
+
+  @include tb {
+    width: 100%;
+  }
+
+  @media (max-width: 600px) {
+    flex-direction: column;
+    margin: 0 auto;
+  }
+  &::after {
+    content: "";
+    display: block;
+    width: 22%;
+    @include pc {
+      width: 20%;
+    }
+    @include tb {
+      width: 33%;
+    }
+    @include sp {
+      display: none;
+    }
+  }
+
+  &__img {
+    margin-top: 8px;
+    @include tb {
+      width: 33%;
+    }
+    @media (max-width: 600px) {
+      margin: 0 auto;
+      width: 80%;
+      text-align: center;
+    }
+
+    @include sp {
+      width: 90%;
+    }
+  }
+
+  img {
+    @include tb {
+      width: 90%;
+    }
+
+    @media (max-width: 600px) {
+      margin: 0 auto 20px;
+      width: 80%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.none-colon {
+  @media (max-width: 440px) {
+    display: none;
+  }
+}
+
+.footer-sp__wrap {
+  @include tb {
+    position: sticky;
+    display: flex;
+    justify-content: space-between;
+    bottom: 0;
+    background: rgba(0, 0, 0, 1);
+    z-index: 1;
+  }
+}
+
+.footer-sp__list {
+  display: none;
+
+  @include tb {
+    display: block;
+    width: 33%;
+
+    &--link {
+      display: block;
+      padding: calc( 16px * 0.6 ) 0;
+      text-align: center;
+      img {
+        width: 60px;
+        margin: 0 auto;
+  
+        @include sp {
+          width: 40px;
+        }
+      }
+  
+      span {
+        display: block;
+        padding: 8px 0;
+        font-size: calc( 16px * 1.2 );
+        color: #fff!important;
+        text-align: center;
+        @include sp {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}

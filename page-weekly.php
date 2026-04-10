@@ -1,16 +1,12 @@
-<!DOCTYPE html>
-<html lang="ja">
-  <head>
-    <?php include('head-meta.php'); ?>
-  </head>
-  <body>
-  <div class="wrapper">
-    <?php include('header.php'); ?>
-    <section id="section">
-      <?php
-        the_content();
-      ?>
-    </section>
-    <?php include('footer.php'); ?>
-  </body>
-</html>
+<?php get_header(); ?>
+
+<main style="background-color: #000;">
+  <div class="gold-border double"></div>
+  <section id="section">
+    <?php
+    echo esc_html(the_content());
+    ?>
+  </section>
+  <div class="gold-border"></div>
+</main>
+<?php get_footer(); ?>

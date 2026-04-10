@@ -1,0 +1,124 @@
+//色定義
+$yellow: #ffc02e;
+
+//rem変換
+$baseFontSize: 16;
+
+@function rem($pixels) {
+  @return $pixels / $baseFontSize * 1rem;
+}
+
+//センタリング
+@mixin center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+//上下中央センタリング
+@mixin flexcenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin gradyellow {
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#dcb300+0,b38b0d+50,fbc400+51,d89e00+100 */
+  background: #dcb300;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #dcb300 0%, #b38b0d 50%, #fbc400 51%, #d89e00 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #dcb300 0%, #b38b0d 50%, #fbc400 51%, #d89e00 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #dcb300 0%, #b38b0d 50%, #fbc400 51%, #d89e00 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#dcb300', endColorstr='#d89e00', GradientType=0);
+  /* IE6-9 */
+}
+
+@mixin gradsilver {
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#d1d1d2+0,bdbebe+50,9a9fa2+51,c3c4c4+100 */
+  background: #d1d1d2;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #d1d1d2 0%, #bdbebe 50%, #9a9fa2 51%, #c3c4c4 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #d1d1d2 0%, #bdbebe 50%, #9a9fa2 51%, #c3c4c4 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #d1d1d2 0%, #bdbebe 50%, #9a9fa2 51%, #c3c4c4 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#d1d1d2', endColorstr='#c3c4c4', GradientType=0);
+  /* IE6-9 */
+}
+
+//line-height余白削除
+@mixin lh($line-height) {
+  &::before {
+    display: block;
+    width: 0;
+    height: 0;
+    margin-top: calc((1 - #{$line-height}) * 0.5em);
+    content: "";
+  }
+
+  &::after {
+    display: block;
+    width: 0;
+    height: 0;
+    margin-bottom: calc((1 - #{$line-height}) * 0.5em);
+    content: "";
+  }
+}
+
+//テキストCSS一括指定
+@mixin txt($color: #fff, $fsize: 16px, $lh: 1.4, $ls: 0.1em) {
+  color: $color;
+  font-size: $fsize;
+  line-height: $lh;
+  letter-spacing: $ls;
+}
+
+//メディアクエリ
+@mixin mq($w, $ltgt: "lt") {
+  $toEm: $w / 16;
+
+  @if ($ltgt=="gt") {
+    @media screen and (min-width: #{$toEm}em) {
+      @content;
+    }
+  }
+
+  @else {
+    @media screen and (max-width: #{$toEm}em) {
+      @content;
+    }
+  }
+}
+
+//レスポンシブ
+$pc: 1240px; // ラップトック
+$tb: 768px; // タブレット
+$sp: 440px; // スマホ
+$xs: 320px; //小型スマホ
+
+@mixin pc {
+  @media (max-width: ($pc)) {
+    @content;
+  }
+}
+
+@mixin tb {
+  @media (max-width: ($tb)) {
+    @content;
+  }
+}
+
+@mixin sp {
+  @media (max-width: ($sp)) {
+    @content;
+  }
+}
+
+@mixin xs {
+  @media (max-width: ($xs)) {
+    @content;
+  }
+}

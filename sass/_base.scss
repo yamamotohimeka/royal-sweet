@@ -1,0 +1,74 @@
+/* Scss Document */
+
+/* =============================================
+rootに対して
+============================================= */
+:root {
+  font-size: calc(100vw / 750);
+}
+
+/* =============================================
+htmlタグに対して
+============================================= */
+html {
+  scroll-behavior: smooth;
+
+  @media (prefers-reduced-motion: reduce) {
+    scroll-behavior: auto;
+  }
+}
+body {
+  color: #fff;
+  font-size: 16px;
+  letter-spacing: 0.1em;
+  font-family: "Yu Mincho", YuMincho, serif;
+}
+a {
+  text-decoration: none;
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+ul {
+  list-style: none;
+}
+
+img{
+  max-width: 100%;
+}
+
+/* =============================================
+共通で使うクラスに対して
+============================================= */
+.gothic {
+  font-family: "Yu Gothic", YuGothic, sans-serif;
+}
+.wrapper {
+  width: 100%;
+  margin: 0 auto;
+  background-color: #000;
+}
+.pc {
+  @include sp {
+    display: none !important;
+  }
+}
+.tab {
+  display: none;
+  @include tb {
+    display: block;
+  }
+}
+.sp {
+  display: none;
+  @include sp {
+    display: block;
+  }
+}
+.none {
+  display: none;
+}
+.flex {
+  display: flex;
+}

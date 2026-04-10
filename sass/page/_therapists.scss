@@ -1,0 +1,257 @@
+/* =============================================
+コンテンツ枠
+============================================= */
+.therapist-container {
+  width: 100%;
+  max-width: 1100px;
+  padding: 42px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  background: rgba($color: #000000, $alpha: 0.7);
+  border: 1px solid #fff;
+  @include pc {
+    width: 90%;
+  }
+  @media (max-width:600px) {
+    width: 100%;
+    border-left: none;
+    border-right: none;
+  }
+  @include sp {
+    padding: 20px;
+  }
+  &::after {
+    content: '';
+    display: block;
+    width: 338px;
+    height: 0;
+    @include pc {
+      width: 33%;
+    }
+    @include tb {
+      width: 50%;
+    }
+  }
+}
+/* =============================================
+セラピスト一覧
+============================================= */
+.therapist-listwrap{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* =============================================
+各セラピストの情報
+============================================= */
+.therapist-list {
+  width: 25%;
+  margin-bottom: 40px;
+  list-style: none;
+  &:nth-last-child(1) {
+    margin-bottom: 0;
+  }
+  &:nth-last-child(2) {
+    margin-bottom: 0;
+  }
+  &:nth-last-child(3) {
+    margin-bottom: 0;
+  }
+  &:nth-last-child(4) {
+    margin-bottom: 0;
+  }
+  @media (max-width:1000px) {
+    width: 33%;
+    &:nth-last-child(1) {
+      margin-bottom: 0;
+    }
+    &:nth-last-child(2) {
+      margin-bottom: 0;
+    }
+    &:nth-last-child(3) {
+      margin-bottom: 0;
+    }
+    &:nth-last-child(4) {
+      margin-bottom: 20px;
+    }  
+  }
+  @media (max-width:600px) {
+    width: 50%;
+    &:nth-last-child(1) {
+      margin-bottom: 0;
+    }
+    &:nth-last-child(2) {
+      margin-bottom: 0;
+    }
+    &:nth-last-child(3) {
+      margin-bottom: 20px;
+    }
+  }
+  @include sp {
+    width: 100%;
+    margin-bottom: 30px;
+    &:nth-last-child(1) {
+      margin-bottom: 0;
+    }
+    &:nth-last-child(2) {
+      margin-bottom: 20px;
+    }
+  }
+  &__link {
+    @include sp {
+      display: flex;
+    }
+    &--top{
+      @include sp {
+        width: 45%;
+      }
+    }
+    &--bottom{
+      display: inline-block;
+      height: 200px;
+      margin-top: 12px;
+      padding: 0 12px 12px 12px;
+      color: #fff;
+      font-size: 14px;
+      line-height: 1.4;
+      letter-spacing: 0.05em;
+      overflow-y: scroll;
+      @include sp {
+        width: 55%;
+        height: 60vw;
+        margin-top: 0px;
+        padding: 0 0 0 18px;
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+/* =============================================
+セラピスト画像、名前、年齢、身長
+============================================= */
+.therapist-image {
+  position: relative;
+  overflow: hidden;
+  @include pc {
+    width: 100%;
+  }
+  &__img{
+    width: 100%;
+    margin:0 auto;
+    img {
+      width: 100%;
+      height: auto;
+      transition:.8s all;
+      &:hover {
+        transform:scale(1.1,1.1);
+        @include sp {
+          transform:scale(1);
+        }
+      }
+    }
+  }
+  &__data{
+    font-size: 14px;
+    line-height: 1.4;
+    color: #fff;
+    vertical-align: middle;
+    margin-bottom: 6px;
+    font-family: 'Yu Gothic',YuGothic,sans-serif;
+    @include sp {
+      font-size: 14px;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &__twitter{
+    width: 20%;
+  }
+}
+.therapistData-wrap{
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px 25px;
+  background-color: rgba($color: #000000, $alpha: 0.6);
+  @include tb {
+    padding: 10px;
+  }
+  @include sp {
+    width: 100%;
+    padding: 6px;
+  }
+}
+
+/* =============================================
+指名料
+============================================= */
+.therapist-fee{
+  display: inline-block;
+  width: 100%;
+  height: 30px;
+  color: #fff;
+  text-align: center;
+  line-height: 30px;
+  background: #7b684b;
+  margin-top: 5px;
+  font-family: 'Yu Gothic',YuGothic,sans-serif;
+  border-right: 2px solid #000;
+  @include pc {
+    width: 100%;
+    font-size: 14px;
+  }
+  @include tb {
+    width: 100%;
+    font-size: 14px;
+  }
+  @include xs {
+    width: 100%;
+    font-size: 12px;
+  }
+}
+
+/* =============================================
+新人表示
+============================================= */
+.therapist-new {
+  &::before {
+    content: "NEW";
+    font-size: 17px;
+    color: #fff;
+    display: block;
+    position: absolute;
+    top: 15px;
+    left: 0px;
+    transform: rotate(-45deg);
+    z-index: 2;
+    font-family: 'Yu Mincho',YuMincho,serif;
+    @include sp {
+      font-size: 14px;
+      top: 12px;
+    }
+  }
+  &::after {
+    content: "";
+    width: 63px;
+    height: 63px;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 63px 63px 0 0;
+    border-color: #7b684b transparent transparent transparent;
+    z-index: 1;
+    @include sp {
+      border-width: 50px 50px 0 0;
+    }
+  }
+}
