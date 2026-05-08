@@ -56,6 +56,7 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZT5NWDSMRD"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
+
     function gtag() {
       dataLayer.push(arguments);
     }
@@ -100,7 +101,7 @@
           </div>
           <div class="header-icon-flex">
             <div class="header-container__info--icon">
-              <a href="https://line.me/ti/p/6GV7QoHXlq" target="_blank" rel="noopener noreferrer"><img
+              <a href="https://line.me/ti/p/GYQ8KQD6rS" target="_blank" rel="noopener noreferrer"><img
                   class="header-container__info--icon--img"
                   src="<?php echo get_template_directory_uri() ?>/img/LINE.png" alt=""></a>
             </div>
@@ -131,7 +132,7 @@
             <li><a href="<?php echo home_url('recruit'); ?>">求人情報</a></li>
             <ul class="menu-tab">
               <li>
-                <a href="https://line.me/ti/p/6GV7QoHXlq" target="_blank" rel="noopener noreferrer">
+                <a href="https://line.me/ti/p/GYQ8KQD6rS" target="_blank" rel="noopener noreferrer">
                   <img
                     src="<?php echo get_template_directory_uri() ?>/img/LINE.png" alt="line">
                 </a>

@@ -13,7 +13,7 @@
     </a>
   </li>
   <li class="footer-sp__list">
-    <a class="footer-sp__list--link" href="https://line.me/ti/p/6GV7QoHXlq" target="_blank">
+    <a class="footer-sp__list--link" href="https://line.me/ti/p/GYQ8KQD6rS" target="_blank">
       <img src="<?php echo get_template_directory_uri() ?>/img/icon-line.png" alt="LINEアイコン">
       <span>LINE</span>
     </a>

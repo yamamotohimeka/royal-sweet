@@ -336,7 +336,7 @@
             <div class="recruit-contact__heading--skew">お問い合わせ</div>
           </h2>
           <p class="recruit-contact__info gothic">TEL：<span class="thirtyfive">080-9299-4519</span></p>
-          <div class="recruit-line"><a href="https://line.me/ti/p/6GV7QoHXlq" target="_blank"><img
+          <div class="recruit-line"><a href="https://line.me/ti/p/GYQ8KQD6rS" target="_blank"><img
                 src="<?php echo get_template_directory_uri(); ?>/img/recruit-line.png" alt=""></a></div>
           <p class="recruit-contact__desc gothic">電話・ショートメール・LINEでお気軽にご質問・ご応募ください。</p>
           <div class="recruit-contact__qr">
@@ -348,7 +348,7 @@
               </p>
             </div>
           </div>
-          <p class="recruit-contact__qr--bgsilver gothic">LINE名：royal-sweet</p>
+          <p class="recruit-contact__qr--bgsilver gothic">LINE名：sweet4519</p>
         </div><!-- .recruit-contact__container -->
 
       </section><!-- .recruit-contact -->

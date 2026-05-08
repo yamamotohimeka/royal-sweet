@@ -19,7 +19,7 @@
         </p>
         <p class="footer__innerText--medium gothic">
           <span class="footer__innerText--small">LINE ID<span class="none-colon">:</span></span>
-          <span class="sp-block">royal-sweet</span>
+          <span class="sp-block">sweet4519</span>
         </p>
       </div>
       <div class="footer__boxInner--qr">
